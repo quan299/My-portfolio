@@ -1,36 +1,582 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>My portfolio</title>
 
-    <div id="calculator">
-        <input id="display" type="text" readonly>
-        <div id="keys">
-            <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
-            <button onclick="appendToDisplay('7')">7</button>
-            <button onclick="appendToDisplay('8')">8</button>
-            <button onclick="appendToDisplay('9')">9</button>
-            <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
-            <button onclick="appendToDisplay('4')">4</button>
-            <button onclick="appendToDisplay('5')">5</button>
-            <button onclick="appendToDisplay('6')">6</button>
-            <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
-            <button onclick="appendToDisplay('1')">1</button>
-            <button onclick="appendToDisplay('2')">2</button>
-            <button onclick="appendToDisplay('3')">3</button>
-            <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
-            <button onclick="appendToDisplay('0')">0</button>
-            <button onclick="appendToDisplay('.')">.</button>
-            <button onclick="calculate()">=</button>
-            <button onclick="clearDisplay()" class="operator-btn">C</button>
+    <link
+      rel="stylesheet"
+      href="css/main.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="css/responsive.css"
+    />
+
+    <link
+      rel="icon"
+      href="./assets/rocket-icon.ico"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--------------- 
+      Header
+    ----------------->
+    <header>
+      <div class="container header__container">
+        <!-- left column -->
+        <div class="header__column--left">
+          <!-- avatar -->
+          <div class="header__img"></div>
+
+          <div class="header__content--left">
+            <h2 class="header__title">Nguyen Tung Quan</h2>
+            <div class="header__badge_container">
+              <div class="badge">Learning web development</div>
+              <div class="badge">Computer Science Student</div>
+            </div>
+            <p>
+              I want to applying for an <span>Intern position</span> in web developer and mobiles apps.
+            </p>
+          </div>
         </div>
-    </div>
 
-    <script src="index.js"></script>
-</body>
+        <!-- right column -->
+        <div class="header__column--right">
+          <h2 class="header__title">Contact Information</h2>
+          <p>
+            My personal email : 
+            <span>nguyentungquan200@gmail.com</span>
+          </p>
+          <p>
+            My personal phone number :
+            <span>440 666 7291</span>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!--------------------------------- 
+      About Me 
+    ----------------------------------->
+    <section class="aboutMe__section">
+      <img
+        src="./assets/computer.png"
+        alt="rocket icon"
+      />
+      <img
+        src="./assets/study.png"
+        alt="laptop icon"
+      />
+
+      <!-- Nội dung chính -->
+      <div class="aboutMe__container">
+        <div class="aboutMe__content_container">
+          <h1 class="section__title">About myself</h1>
+
+          <p class="section__description">
+            A passionate and driven student proficient in Java, HTML, CSS, and JavaScript, seeking a role to apply foundational knowledge, contribute to real-world projects, and gain industry experience. Currently learning Java Spring and developing personal projects.
+          </p>
+
+          <div class="CTA">
+            <a
+              href="./assets/NGUYEN-TUNG-QUAN-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="primaryButton"
+              download
+              >Download Resume</a
+            >
+
+            <a
+              href="#ProjectContainer"
+              class="outlineButton"
+              >Looking through my basic projects</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------- 
+      Skills
+    ----------------------------------->
+    <section class="skills__section">
+      <div class="container skills__container">
+        <!-- header -->
+        <div class="section__header">
+          <h1 class="section__title">Skills</h1>
+
+          <p class="section__description">
+            Proficient in multiple modern web development tools, with experience building interactive and user-friendly web applications, and passionate about writing clean, maintainable code. Skilled in Java, HTML, CSS, and JavaScript, and familiar with essential tools such as Git and IntelliJ IDEA. Committed to creating efficient web solutions that enhance user experience while ensuring code quality and ease of maintenance.
+          </p>
+        </div>
+
+        <!-- grid -->
+        <div class="skills__grid_container">
+          <!-- grid item 1 -->
+          <div class="skills__grid_item"></div>
+
+          <!-- grid item 2 -->
+          <div class="skills__grid_item">
+            <div class="skills__grid_item_header">
+              <div>
+                <img
+                  src="./assets/program.png"
+                  alt="check-icon"
+                />
+                <h2>Programming languages and Tools</h2>
+              </div>
+              <p>
+               I have foundational knowledge in Java, HTML, CSS, and JavaScript. I enjoy building interactive and user-friendly web applications, focusing on clean and maintainable code. Currently, I’m learning Java Spring to expand my backend development skills while developing personal projects.
+              </p>
+            </div>
+
+            <!-- skill logos -->
+            <div>
+              <!-- list 1 -->
+              <div class="icons-list-wrapper">
+                <div class="icons-list">
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/java.png"
+                      alt="Java"
+                    />
+                    <span>Java</span>
+                  </div>
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/github.png"
+                      alt="github icon"
+                    />
+                    <span>github</span>
+                  </div>
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/css.png"
+                      alt="CSS icon"
+                    />
+                    <span>CSS</span>
+                  </div>
+
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/java.png"
+                      alt="java icon"
+                    />
+                    <span>java</span>
+                  </div>
+
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/html.png"
+                      alt="html icon"
+                    />
+                    <span>html</span>
+                  </div>
+
+
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/js.png"
+                      alt="js icon"
+                    />
+                    <span>js</span>
+                  </div>
+
+                                  <div class="icon-badges">
+                    <img
+                      src="./assets/java.png"
+                      alt="Java"
+                    />
+                    <span>Java</span>
+                  </div>
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/github.png"
+                      alt="github icon"
+                    />
+                    <span>github</span>
+                  </div>
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/css.png"
+                      alt="CSS icon"
+                    />
+                    <span>CSS</span>
+                  </div>
+
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/java.png"
+                      alt="java icon"
+                    />
+                    <span>java</span>
+                  </div>
+
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/html.png"
+                      alt="html icon"
+                    />
+                    <span>html</span>
+                  </div>
+
+
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/js.png"
+                      alt="js icon"
+                    />
+                    <span>js</span>
+                  </div>
+
+                   <div class="icon-badges">
+                    <img
+                      src="./assets/mysql.png"
+                      alt="js icon"
+                    />
+                    <span>MySQL</span>
+                  </div>
+
+                 
+                </div>
+              </div>
+
+              <!-- list 2 -->
+               <div class="icons-list-wrapper">
+                <div class="icons-list">
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/java.png"
+                      alt="Java"
+                    />
+                    <span>Java</span>
+                  </div>
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/github.png"
+                      alt="github icon"
+                    />
+                    <span>github</span>
+                  </div>
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/css.png"
+                      alt="CSS icon"
+                    />
+                    <span>CSS</span>
+                  </div>
+                   <div class="icon-badges">
+                    <img
+                      src="./assets/mysql.png"
+                      alt="js icon"
+                    />
+                    <span>MySQL</span>
+                  </div>
+
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/java.png"
+                      alt="java icon"
+                    />
+                    <span>java</span>
+                  </div>
+
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/html.png"
+                      alt="html icon"
+                    />
+                    <span>html</span>
+                  </div>
+
+
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/js.png"
+                      alt="js icon"
+                    />
+                    <span>js</span>
+                  </div>
+
+                                  <div class="icon-badges">
+                    <img
+                      src="./assets/java.png"
+                      alt="Java"
+                    />
+                    <span>Java</span>
+                  </div>
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/github.png"
+                      alt="github icon"
+                    />
+                    <span>github</span>
+                  </div>
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/css.png"
+                      alt="CSS icon"
+                    />
+                    <span>CSS</span>
+                  </div>
+
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/java.png"
+                      alt="java icon"
+                    />
+                    <span>java</span>
+                  </div>
+
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/html.png"
+                      alt="html icon"
+                    />
+                    <span>html</span>
+                  </div>
+
+
+                  <div class="icon-badges">
+                    <img
+                      src="./assets/js.png"
+                      alt="js icon"
+                    />
+                    <span>js</span>
+                  </div>
+
+                 
+                </div>
+              </div>
+              </div>
+              </div>
+
+          <!-- grid item 3 -->
+          <div class="skills__grid_item">
+            <div class="skills__grid_item_header">
+              <div>
+                <img
+                  src="./assets/softskill.png"
+                  alt="check icon"
+                />
+                <h2>Soft Skills</h2>
+              </div>
+              <p>
+               Excellent communication, collaboration, and problem-solving skills, combined with a proactive and eager-to-learn attitude. Highly adaptable to dynamic team environments and focused on contributing effectively to shared goals while maintaining a positive and growth-oriented mindset.
+              </p>
+            </div>
+
+            <div class="softSkills__container">
+              <div class="softSkills_badge">
+                <p>Excellent communication</p>
+              </div>
+
+              <div class="softSkills_badge">
+                <p>Good Time Management</p>
+              </div>
+              <div class="softSkills_badge">
+                <p>Reliable</p>
+              </div>
+              <div class="softSkills_badge">
+                <p>Eager to learn</p>
+              </div>
+
+              <div class="softSkills__book_icons">
+                <img
+                  src="./assets/book.png"
+                  alt=" book icon"
+                />
+                <img
+                  src="./assets/book.png"
+                  alt=" book icon"
+                />
+                <img
+                  src="./assets/book.png"
+                  alt=" book icon"
+                />
+                <img
+                  src="./assets/book.png"
+                  alt=" book icon"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- grid item 4 -->
+          <div class="skills__grid_item"></div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------- 
+      Projects - Dự Án
+    ----------------------------------->
+    <section
+      class="projects__section"
+      id="ProjectContainer"
+    >
+      <div class="container projects_container">
+        <!-- header -->
+        <div class="section__header">
+          <h1 class="section__title">Basic projects</h1>
+          <p class="section__description">
+            Building some basic projects to learn CSS, HTML and JavaScript. A good resources to learn and practice in programming.
+          </p>
+        </div>
+
+        <!-- cards -->
+        <div class="projects__cards_container">
+          <a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="projects_cards">
+              <div class="projects__cards_wrapper">
+                <img
+                  src="./assets/Todo.jpg"
+                  alt="project1"
+                  class="projects__cards_img"
+                />
+              </div>
+              <div class="projects__cards_titles">
+                <h4>Project 1</h4>
+                <h3>Todo List</h3>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="projects_cards">
+              <div class="projects__cards_wrapper">
+                <img
+                  src="./assets/weather.jpg"
+                  alt="project1"
+                  class="projects__cards_img"
+                />
+              </div>
+              <div class="projects__cards_titles">
+                <h4>Project 2</h4>
+                <h3>Weather app</h3>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="projects_cards">
+              <div class="projects__cards_wrapper">
+                <img
+                  src="./assets/calculator.webp"
+                  alt="project1"
+                  class="projects__cards_img"
+                />
+              </div>
+              <div class="projects__cards_titles">
+                <h4>Project 3</h4>
+                <h3>Calculator</h3>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="projects_cards">
+              <div class="projects__cards_wrapper">
+                <img
+                  src="./assets/project4.jpg"
+                  alt="project1"
+                  class="projects__cards_img"
+                />
+              </div>
+              <div class="projects__cards_titles">
+                <h4>Project 4</h4>
+                <h3>On-going</h3>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="projects_cards">
+              <div class="projects__cards_wrapper">
+                <img
+                  src="./assets/project5.jpg"
+                  alt="project1"
+                  class="projects__cards_img"
+                />
+              </div>
+              <div class="projects__cards_titles">
+                <h4>Project 5</h4>
+                <h3>On-going</h3>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="projects_cards">
+              <div class="projects__cards_wrapper">
+                <img
+                  src="./assets/project6.jpg"
+                  alt="project1"
+                  class="projects__cards_img"
+                />
+              </div>
+              <div class="projects__cards_titles">
+                <h4>Project 6</h4>
+                <h3>On-going</h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------------------- 
+      Footer
+    ----------------------------------->
+    <footer>
+      <div class="container">
+        <p>© Nguyen Tung Quan</p>
+      </div>
+    </footer>
+  </body>
 </html>
